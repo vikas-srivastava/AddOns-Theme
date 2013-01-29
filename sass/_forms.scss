@@ -1,0 +1,52 @@
+// Shared size and type resets
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  height: $baseLineHeight - 5px;
+  color: $textColor;
+  line-height: $baseLineHeight - 5px;
+}
+
+// Everything else
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  border: 2px solid $inputBorder;
+  @include noShadow;
+  @include placeholderColor($grayDark); //($color) -- changes the default color of the placeholder text
+
+  // Focus state
+  &:focus {
+    border-color: $blueLight;
+    outline: 0;
+    outline: thin dotted \9; /* IE6-9 */
+    @include noShadow;
+  }
+}

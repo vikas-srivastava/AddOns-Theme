@@ -1,0 +1,55 @@
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+/* -- COLOUR -- */
+/* -- Typography --*/
+/* -- GRID -- */
+.ie7 .HomePage .homepageFeatures [class^="feature"], .ie8 .HomePage .homepageFeatures [class^="feature"] {
+  margin-left: 35px;
+  cursor: pointer;
+}
+.ie7 .HomePage .homepageFeatures .featureOne, .ie8 .HomePage .homepageFeatures .featureOne {
+  margin-left: 10px;
+}
+
+.ie7 .homepageFeatures [class^="feature"] span {
+  display: block;
+  top: -20px;
+}
+.ie7 .homepageFeatures .featureOne span {
+  width: 60px;
+  height: 60px;
+  background: url("../imgs/ie/manage.png") no-repeat center;
+}
+.ie7 .homepageFeatures .featureTwo span {
+  width: 60px;
+  height: 60px;
+  background: url("../imgs/ie/flexible.png") no-repeat center;
+  left: 5px;
+}
+.ie7 .homepageFeatures .featureThree .doubleIconA {
+  width: 60px;
+  height: 60px;
+  background: url("../imgs/ie/addons.png") no-repeat center;
+  left: 43px;
+}
+.ie7 .homepageFeatures .featureFour span {
+  width: 60px;
+  height: 60px;
+  background: url("../imgs/ie/performance.png") no-repeat center;
+  left: 43px;
+}
+.ie7 .homepageFeatures .featureFive span {
+  width: 60px;
+  height: 60px;
+  background: url("../imgs/ie/secure.png") no-repeat center;
+  left: 0px;
+}
+.ie7 .homepageFeatures .featureSix .doubleIconA {
+  width: 80px;
+  height: 60px;
+  background: url("../imgs/ie/responsive.png") no-repeat center;
+  left: 32px;
+}

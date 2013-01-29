@@ -1,0 +1,8 @@
+--- 
+handler: 
+  branch: master
+  commit: fa4d1233750b8ebe5dad74d3431ad18b608cb45a
+repository_class: Piston::Git::Repository
+format: 1
+repository_url: git://github.com/aaronrussell/compass-rgbapng.git
+lock: false

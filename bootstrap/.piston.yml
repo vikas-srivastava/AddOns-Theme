@@ -1,0 +1,8 @@
+--- 
+repository_url: https://github.com/jlong/sass-twitter-bootstrap.git
+handler: 
+  branch: master
+  commit: 460c343dcd2f613721786e131208bab1885eafc8
+lock: false
+format: 1
+repository_class: Piston::Git::Repository

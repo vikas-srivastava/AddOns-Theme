@@ -1,0 +1,26 @@
+/*-------------Content----------------*/
+.content { width: 1340px; margin: 0 auto; clear: both; padding-top: 20px; -webkit-transition: all .3s; }
+
+/*------------- Four Column Row ----------------*/
+ul.four-col-grid { padding-bottom: 40px; }
+
+ul.four-col-grid li { width: 22%; margin-right: 4%; float: left; margin-bottom: 10px; }
+
+ul.four-col-grid li:nth-child(4n+4) { margin-right: 0; float: right; }
+
+/*------------- up to 1480px ----------------*/
+@media only screen and (max-width: 1480px) { .content { width: 90%; } }
+/*------------- small laptops / ipad in landscape ----------------*/
+@media only screen and (max-width: 1120px) { ul.four-col-grid li { width: 30%; margin-right: 5%; }
+  ul.four-col-grid li:nth-child(4n+4) { margin-right: 5%; float: left; }
+  ul.four-col-grid li:nth-child(3n+3) { margin-right: 0; float: right; } }
+/*------------- ipad in portrait ----------------*/
+@media only screen and (max-width: 768px) { ul.four-col-grid li { width: 45%; margin-right: 10%; }
+  ul.four-col-grid li:nth-child(4n+4) { margin-right: 10%; float: left; }
+  ul.four-col-grid li:nth-child(3n+3) { margin-right: 10%; float: left; }
+  ul.four-col-grid li:nth-child(even) { margin-right: 0; float: right; }
+  ul.four-col-grid li:nth-child(odd) { clear: both; } }
+/*------------- iphone in landscape ----------------*/
+@media only screen and (max-width: 480px) { .content { width: 80%; padding-top: 20px; }
+  ul.four-col-grid li { width: 100%; margin-right: 0; float: none; }
+  ul.four-col-grid li:nth-child(even) { float: none; } }

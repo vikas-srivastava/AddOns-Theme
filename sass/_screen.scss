@@ -1,0 +1,32 @@
+/* In this file you should write your main styles. */
+
+@import 'variables';
+@import 'mixins';
+
+@include font-icon-family(entypo);
+@include font-icon-family(iconic);
+
+.main { // adds grid layout
+	@extend .container;
+}
+
+.clear {
+	@include clearFix();
+}
+
+.btn {
+	@include border-radius(0);
+	text-shadow: 0 -1px 1px rgba(0,0,0,.25); //override default bootstrap button shadow
+	&:active {
+		text-shadow: 0 1px 1px rgba(0,0,0,.25); //switches text shadow when button is pressed
+	}
+}
+
+.ssbtn {
+	@include buttonBackground($btnHomepageBackground, $btnHomepageBackgroundHighlight); //($startColor, $endColor, $textColor: #fff, $textShadow: 0 -1px 0 rgba(0,0,0,.25))
+}
+
+
+.heading {
+	margin-top: $grid-y*10;
+}

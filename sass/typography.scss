@@ -1,0 +1,125 @@
+/*
+This file imports just the files that define typographic conventions, for including in a TinyMCE editor
+or equivalent iframe
+
+Use this code in your mysite/_config.php (_after_ you have set your theme) to include:
+
+HtmlEditorConfig::get('cms')->setOptions(array(
+  'content_css' => Director::absoluteURL(BASE_URL . '/themes/' . SSViewer::current_theme() . '/css/typography.css')
+));
+
+*/
+
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
+
+// Include variables & mixins
+@import 'variables';
+@import 'mixins';
+
+// Reset
+@import 'reset';
+
+// Just the bits of bootstrap that affect typography
+@import "scaffolding";
+@import 'type';
+@import 'code';
+@import 'tables';
+
+body {
+	font-size:14px;
+	line-height: 20px;
+}
+
+h1 {
+	font-size: 60px;
+	line-height: 70px;
+	color:$blue;
+	margin: $grid-y*6 0 $grid-y*10 0;
+}
+h2 {
+	font-size: 36px;
+	line-height: 50px;
+	color:$blue;
+	margin: $grid-y*4 0;
+}
+h3 {
+	font-size: 30px;
+	line-height: 40px;
+	color:$ssGray;
+	font-weight:$normal;
+	margin: $grid-y*3 0;
+}
+h4 {
+	font-size: 24px;
+	line-height: 35px;
+	margin: $grid-y*3 0;
+}
+h5 {
+	font-size: 21px;
+	line-height: 30px;
+	color:$blue;
+	margin: $grid-y*2 0;
+}
+h6 {
+	font-size: 18px;
+	line-height: 30px;
+	margin: $grid-y*2 0;
+}
+
+a {
+	font-family: $bodyFontFamily;
+	&:hover {
+		text-decoration:none;
+	}
+	.header & {
+		font-family: $sansFontFamily;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	a {
+		color: $blueLight;
+		font-weight:$bold;
+		font-family:$sansFontFamily;
+	}
+}
+
+h3 {
+	a {
+		border-bottom: $grid-y solid $gray;
+		padding-bottom: $grid-y*2;
+		margin-bottom:$grid-y*6;
+		display:inline-block;
+		@include transition(#{border linear .1s});
+		&:hover {
+			border-bottom: $grid-y solid $linkColorHover;
+		}
+	}
+}
+
+p {
+	font-family: $altFontFamily;
+	&.intro {
+		font-family: $sansFontFamily;
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 25px;
+	}
+}
+
+small {
+	font-family: $altFontFamily;
+	color: $ssGray;
+	font-size: 12px;
+	line-height: 20px;
+	margin-bottom:$grid-y*3;
+}
+
+em {
+	font-family: $sansFontFamily;
+	font-weight: $bold;
+}
+
+ul {
+	list-style-type:none;
+}

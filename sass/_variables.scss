@@ -1,0 +1,98 @@
+// Add local variables here
+
+/* -- COLOUR -- */
+
+// Grays
+// -------------------------
+$black:                 #000 !default;
+$grayDarker:            #656973 !default;
+$grayDark:              #BFBFBF !default;
+$gray:                  #EEEEEE !default;
+$grayLight:             #F7F7F7 !default;
+$grayLighter:           #FCFCFC !default;
+$white:                 #FFF !default;
+
+// SilverStripe colors
+// -------------------------
+$blueLight:             #49BAEF !default;
+$blue:                  #0B467F !default;
+$blueDark:              #121929 !default;
+$ssGray:                #798D85 !default;
+$green:                 #00DA92 !default;
+$pink:                  #DE004B !default;
+
+// Scaffolding
+// -------------------------
+$textColor:             lighten($blueDark, 10%) !default;
+
+// Links
+// -------------------------
+$linkColor:             darken($blueLight, 2%) !default;
+$linkColorHover:        darken($linkColor, 10%) !default;
+
+/* -- Typography --*/
+
+// -------------------------
+$bold:                              700 !default;
+$normal:                            400 !default;
+
+$sansFontFamily:                    'PT Sans', sans-serif !default;
+$bodyFontFamily:                    "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+$baseFontSize:                      16px !default;
+$baseLineHeight:                    25px !default;
+
+$altFontFamily:                     $bodyFontFamily !default;
+
+$headingsFontWeight:                700 !default;    // instead of browser default, bold
+
+// Header
+// -------------------------
+
+$brandHeight:                       110px;
+
+// Tables
+// -------------------------
+$tableBackground:                   $white !default; // overall background-color
+$tableBackgroundAccent:             $grayLighter !default; // for striping
+$tableBackgroundHover:              $grayLight !default; // for hover
+$tableBorder:                       $gray !default; // table and cell border
+
+// Buttons
+// -------------------------
+$btnHomepageBackground:             $blueLight;
+$btnHomepageBackgroundHighlight:    darken($blueLight, 5%);
+
+// Forms
+// -------------------------
+$inputBackground:                   $white !default;
+$inputBorder:                       $grayDark !default;
+$inputBorderRadius:                 0px !default;
+$inputDisabledBackground:           $grayLighter !default;
+$formActionsBackground:             #f5f5f5 !default;
+
+/* -- GRID -- */
+
+// Default 960px grid
+// -------------------------
+$gridColumns:                       24 !default;
+$gridColumnWidth:                   30px !default;
+$gridGutterWidth:                   10px !default;
+$gridRowWidth:                      ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1)) !default;
+
+// 1200px min
+$gridColumnWidth1200:               30px !default;
+$gridGutterWidth1200:               10px !default;
+$gridRowWidth1200:                  ($gridColumns * $gridColumnWidth1200) + ($gridGutterWidth1200 * ($gridColumns - 1)) !default;
+
+// 768px-979px
+$gridColumnWidth768:                30px !default;
+$gridGutterWidth768:                10px !default;
+$gridRowWidth768:                   ($gridColumns * $gridColumnWidth768) + ($gridGutterWidth768 * ($gridColumns - 1)) !default;
+
+// Baseline Grid
+$grid-y:                            5px !default;
+$grid-x:                            5px !default;
+
+// Include bootstrap's variables last
+@import '../bootstrap/lib/variables';

@@ -1,0 +1,58 @@
+@import "rgbapng";
+
+.tab-content {
+	@extend .row;
+}
+
+h2 {
+	@extend .heading;
+}
+
+#modules, #themes, #widgets {
+	@extend .container;
+	.columns {
+		@extend .row;
+		.leftColumn {
+			@include colSpan(11);
+		}
+		.rightColumn {
+			@include colSpan(10);
+			@extend .offset1;
+			padding-left: $gridColumnWidth + ($gridGutterWidth*2); //adds padding to right column so that when left border is added it is centered between columns
+		}
+	}
+	.addOnsList {
+		@extend .row;
+		background: $grayLight;
+		border: 1px solid $gray;
+		.addOnListing {
+			@include colSpan(23);
+			@extend .offset1;
+			.addOnInfo {
+				font-family: $sansFontFamily;
+				font-size: 16px;
+				a {
+					font-weight: $bold;
+					font-size: 15px;
+				}
+			}
+			.addOnTitle {
+				@include colSpan(23);
+			}
+			.addOnScreenshot {
+				@include colSpan(6);
+			}
+			.addOnDesc {
+				@include colSpan(15);
+				@extend .offset1;
+			}
+			.addOnLinks {
+				@include colSpan(23);
+				.addOnLink {
+					font-size: 16px;
+					font-weight: $bold;
+				}
+			}
+		}
+	}
+}

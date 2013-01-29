@@ -1,0 +1,8 @@
+--- 
+lock: false
+repository_url: git://github.com/krisbulman/font-icons.git
+format: 1
+repository_class: Piston::Git::Repository
+handler: 
+  branch: master
+  commit: d10a23e1ef95f50640e505096b36afb1def6b088
