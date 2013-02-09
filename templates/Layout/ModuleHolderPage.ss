@@ -26,13 +26,19 @@
 			</div>
 
 			<div class="addOnsList">
+				<% if ModuleList %>
+				<% loop ModuleList %>
 				<div class="addOnListing">
-					<% include AddOnsListing %>
+						<% include ExtensionListing %>
 				</div>
+				<% end_loop %>
+				<% end_if %>
 			</div>
 
-			<div>
-				<!-- place pagination here -->
+			<div class="pagination pagination-centered">
+				<% with ModuleList %>
+					<% include Pagination %>
+				<% end_with %>
 			</div>
 
 		</div>
